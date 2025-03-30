@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Статистика продаж</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container {
+      margin: 20px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 5px 0;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <h1>Статистика продаж</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog">Каталог</a>
+            <a href="/stats">Статистика</a>
+            <a href="/analytics">Аналитика</a>
+            <span id="authLinks"></span>
+          </nav>
+      
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Статистика продаж</h1>
+    
+    <div id="error-container"></div>
+    
+
+    
+    <div class="chart-container">
+      <h2>Выручка за последние 30 дней</h2>
+      <canvas id="revenueChart" height="300"></canvas>
+    </div>
+    
+    <div class="chart-container">
+      <h2>Самые популярные товары</h2>
+      <div id="popularProducts"></div>
+    </div>
+  </main>
+
+  <script src="/public/js/auth-header.js"></script>
+  <script src="/public/js/stats.js"></script>
+</body>
+</html>

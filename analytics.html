@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аналитика посещаемости</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .analytics-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .popular-pages-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .popular-pages-table th, 
+    .popular-pages-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .popular-pages-table th {
+      background-color: #f5f5f5;
+      font-weight: 500;
+    }
+    .popular-pages-table tr:hover {
+      background-color: #f9f9f9;
+    }
+    .no-data {
+      padding: 20px;
+      text-align: center;
+      color: #666;
+    }
+    .error-alert {
+      padding: 15px;
+      background: #ffebee;
+      color: #c62828;
+      border-radius: 4px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .error-alert button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #c62828;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <h1>Свадебные платья</h1>
+        <nav>
+          <a href="/">Главная</a>
+          <a href="/catalog">Каталог</a>
+          <a href="/stats">Статистика</a>
+          <a href="/analytics">Аналитика</a>
+          <span id="authLinks"></span>
+        </nav>
+    
+      </div>
+  </header>
+
+  <main class="analytics-container">
+    <h1>Аналитика посещаемости</h1>
+    
+    <div id="error-container"></div>
+    
+    <section>
+      <h2>Популярные страницы</h2>
+      <div id="popularPagesList"></div>
+    </section>
+  </main>
+
+  <script src="/public/js/auth-header.js"></script>
+    <script src="/public/js/analytics-page.js"></script>
+</body>
+</html>

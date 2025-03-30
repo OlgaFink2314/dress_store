@@ -1,0 +1,509 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header h1 {
+    color: #d4a373;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a:hover {
+    color: #d4a373;
+  }
+  
+  .hero {
+    background: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+    margin: 30px 0;
+    border-radius: 8px;
+  }
+  
+  .hero h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #d4a373;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #c08c5e;
+  }
+  
+  .featured {
+    margin: 40px 0;
+  }
+  
+  .featured h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dresses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .dress-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .dress-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .dress-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .dress-info {
+    padding: 15px;
+  }
+  
+  .dress-title {
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-bottom: 5px;
+
+  }
+  
+  a{ text-decoration: none;
+    color: #d4a373;
+}
+  
+  .dress-price {
+    font-weight: bold;
+    color: #d4a373;
+    font-size: 1.2rem;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  /* Стили для каталога */
+  .catalog-controls {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search {
+    display: flex;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .search input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .search button {
+    padding: 10px 15px;
+    background: #d4a373;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .filters select, .filters input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .price-range {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .price-range input {
+    width: 80px;
+  }
+
+  .no-results, .error-message {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    color: #666;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+  }
+  
+  .dress-card .dress-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  @media (min-width: 992px) {
+    .product-container {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+
+
+  /* Стили для страницы товара */
+.product-page {
+    padding: 30px 0;
+  }
+  
+
+
+  .product-gallery {
+    position: relative;
+  }
+  
+  @media (min-width: 768px) {
+    .product-gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+
+  .main-image {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+  }
+
+  
+
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .thumbnails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .thumbnails img:hover {
+    border-color: #d4a373;
+    transform: scale(1.05);
+  }
+
+
+  .product-info {
+    margin-top: 30px;
+  }
+  
+  .product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-info .price {
+    font-size: 1.5rem;
+    color: #d4a373;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .details {
+    margin: 30px 0;
+  }
+  
+  .details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .specs ul {
+    list-style: none;
+    margin-top: 15px;
+  }
+  
+  .specs li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .specs strong {
+    color: #555;
+    min-width: 120px;
+    display: inline-block;
+  }
+  
+  .add-to-cart {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background: #d4a373;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background: #c08c5e;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.2rem;
+  }
+  
+  .error .btn {
+    margin-top: 20px;
+  }
+
+
+
+  
+.product-details {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  }
+  
+  .product-title {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .product-price {
+    font-size: 1.8rem;
+    color: #d4a373;
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: block;
+  }
+  
+  .product-description {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+  }
+  
+  .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .spec-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .spec-label {
+    font-weight: bold;
+    color: #666;
+    min-width: 120px;
+    margin-right: 10px;
+  }
+  
+  .spec-value {
+    color: #333;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+
+  .add-to-cart {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    background: #d4a373;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .add-to-cart:hover {
+    background: #c08c5e;
+    transform: translateY(-2px);
+  }
+  
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #d4a373;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .back-link svg {
+    margin-right: 8px;
+  }
+
+
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  nav a.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+
+  /* Стили для страницы статистики */
+#statsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#statsTable th, #statsTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#statsTable th {
+  background-color: #f8f9fa;
+}
+
+/* Стили для страницы аналитики */
+.page-item, .product-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.page-url, .product-name {
+  font-weight: bold;
+}
+
+.page-count, .product-views {
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.chart-container {
+  max-width: 800px;
+  margin: 20px auto;
+}

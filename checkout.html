@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа - Свадебные платья</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/checkout.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Свадебные платья</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/stats">Статистика</a>
+        <a href="/analytics">Аналитика</a>
+        <span id="authLinks"></span>
+      </nav>
+  
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Оформление заказа</h2>
+    
+    <div class="checkout-container">
+      <div class="order-summary">
+        <h3>Ваш заказ</h3>
+        <div id="orderItems"></div>
+        <div class="order-total">
+          <span>Итого:</span>
+          <span id="orderTotal">0 ₽</span>
+        </div>
+      </div>
+      
+      <div class="checkout-form">
+        <h3>Данные для оформления</h3>
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label for="fullName">ФИО*</label>
+            <input type="text" id="fullName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Телефон*</label>
+            <input type="tel" id="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="address">Адрес доставки*</label>
+            <textarea id="address" rows="3" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="paymentMethod">Способ оплаты*</label>
+            <select id="paymentMethod" required>
+              <option value="">Выберите способ оплаты</option>
+              <option value="card">Банковская карта</option>
+              <option value="cash">Наличные при получении</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="comments">Комментарий к заказу</label>
+            <textarea id="comments" rows="2"></textarea>
+          </div>
+          
+          <button type="submit" class="btn">Подтвердить заказ</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Свадебные платья. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/auth-header.js"></script>
+  <script src="/public/js/checkout.js"></script>
+
+  <script src="/public/js/analytics.js"></script>
+</body>
+</html>

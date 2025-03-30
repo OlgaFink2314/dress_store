@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/auth.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Свадебные платья</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/stats">Статистика</a>
+        <a href="/analytics">Аналитика</a>
+        <span id="authLinks"></span>
+      </nav>
+  
+    </div>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+  </header>
+
+  <main class="container auth-container">
+    <div class="auth-tabs">
+      <button class="tab-btn active" data-tab="login">Вход</button>
+      <button class="tab-btn" data-tab="register">Регистрация</button>
+    </div>
+
+    <div class="auth-form active" id="loginForm">
+      <h2>Вход в аккаунт</h2>
+      <form id="loginFormElement">
+        <div class="form-group">
+          <label for="loginUsername">Логин</label>
+          <input type="text" id="loginUsername" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Пароль</label>
+          <input type="password" id="loginPassword" required>
+        </div>
+        <button type="submit" class="btn">Войти</button>
+      </form>
+    </div>
+
+    <div class="auth-form" id="registerForm">
+      <h2>Регистрация</h2>
+      <form id="registerFormElement">
+        <div class="form-group">
+          <label for="regUsername">Логин*</label>
+          <input type="text" id="regUsername" required>
+        </div>
+        <div class="form-group">
+          <label for="regEmail">Email*</label>
+          <input type="email" id="regEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="regPassword">Пароль*</label>
+          <input type="password" id="regPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="regFirstName">Имя</label>
+          <input type="text" id="regFirstName">
+        </div>
+        <div class="form-group">
+          <label for="regLastName">Фамилия</label>
+          <input type="text" id="regLastName">
+        </div>
+        <div class="form-group">
+          <label for="regPhone">Телефон</label>
+          <input type="tel" id="regPhone" placeholder="+7 (XXX) XXX-XX-XX">
+        </div>
+        <div class="form-group">
+          <label for="regAddress">Адрес</label>
+          <textarea id="regAddress" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn">Зарегистрироваться</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Свадебные платья. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/phone-mask.js"></script>
+
+  <script src="/public/js/auth.js"></script>
+
+  <script src="/public/js/analytics.js"></script>
+
+</body>
+
+</html>

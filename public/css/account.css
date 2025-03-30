@@ -1,0 +1,55 @@
+.account-container {
+    max-width: 800px;
+    margin: 40px auto;
+  }
+  
+  .account-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  @media (min-width: 768px) {
+    .account-info {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .info-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  }
+  
+  .info-section h3 {
+    color: #d4a373;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .info-section p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .info-section strong {
+    color: #333;
+    min-width: 100px;
+    display: inline-block;
+  }
+  
+  #logoutBtn {
+    background: none;
+    border: none;
+    color: #d4a373;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 15px;
+  }
+  
+  #logoutBtn:hover {
+    text-decoration: underline;
+  }

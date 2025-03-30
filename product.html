@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебные платья - Детали товара</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Свадебные платья</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/stats">Статистика</a>
+        <a href="/analytics">Аналитика</a>
+        <span id="authLinks"></span>
+      </nav>
+  
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="/catalog" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Назад в каталог
+    </a>
+    
+    <div class="product-container">
+      <div class="product-gallery">
+        <div class="main-image">
+          <img id="mainProductImage" src="" alt="Свадебное платье">
+        </div>
+        <div class="thumbnails" id="productThumbnails">
+          <!-- Миниатюры будут добавлены через JS -->
+        </div>
+      </div>
+      
+      <div class="product-details">
+        <h1 class="product-title" id="productTitle">Название платья</h1>
+        <span class="product-price" id="productPrice">0.00  ₽</span>
+        
+        <div class="product-description" id="productDescription">
+          Описание платья будет загружено здесь...
+        </div>
+        
+        <div class="specs-grid" id="productSpecs">
+          <!-- Характеристики будут добавлены через JS -->
+        </div>
+        
+        <div class="action-buttons">
+          <button class="add-to-cart" id="addToCartBtn">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Свадебные платья. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/auth-header.js"></script>
+
+
+  <script src="/public/js/product.js"></script>
+  <script src="/public/js/analytics.js"></script>
+</body>
+</html>

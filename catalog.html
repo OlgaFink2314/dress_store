@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебные платья - Каталог</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Свадебные платья</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/stats">Статистика</a>
+        <a href="/analytics">Аналитика</a>
+        <span id="authLinks"></span>
+      </nav>
+  
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+  </header>
+
+  <main class="container">
+    <h2>Каталог свадебных платьев</h2>
+
+    <div class="catalog-controls">
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Поиск по названию...">
+        <button id="searchBtn">Найти</button>
+      </div>
+
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="">Все категории</option>
+          <!-- Категории подгрузятся через JS -->
+        </select>
+
+        <div class="price-range">
+          <input type="number" id="minPrice" placeholder="От">
+          <span>-</span>
+          <input type="number" id="maxPrice" placeholder="До">
+        </div>
+
+        <select id="sortSelect">
+          <option value="">Сортировка</option>
+          <option value="price_asc">По возрастанию цены</option>
+          <option value="price_desc">По убыванию цены</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="dresses-grid" id="dressesContainer">
+      <!-- Тут будут платья через JS -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Свадебные платья. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/auth-header.js"></script>
+
+  <script src="/public/js/catalog.js"></script>
+
+  <script src="/public/js/analytics.js"></script>
+</body>
+
+</html>

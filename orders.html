@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История заказов - Свадебные платья</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/orders.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Свадебные платья</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/stats">Статистика</a>
+        <a href="/analytics">Аналитика</a>
+        <span id="authLinks"></span>
+      </nav>
+  
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>История ваших заказов</h2>
+    
+    <div id="ordersList">
+      <div class="loading">Загрузка истории заказов...</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Свадебные платья. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/auth-header.js"></script>
+  <script src="/public/js/orders.js"></script>
+  <script src="/public/js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина - Свадебные платья</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/cart.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Свадебные платья</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/stats">Статистика</a>
+        <a href="/analytics">Аналитика</a>
+        <span id="authLinks"></span>
+      </nav>
+  
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+  </header>
+
+  <main class="container">
+    <h2>Ваша корзина</h2>
+
+    <div id="cartContent">
+      <div class="empty-cart">
+        <p>Ваша корзина пуста</p>
+        <a href="/catalog" class="btn">Перейти в каталог</a>
+      </div>
+    </div>
+
+    <div id="cartSummary" class="cart-summary" style="display: none;">
+      <div class="summary-row">
+        <span>Итого:</span>
+        <span id="totalAmount">0 ₽</span>
+      </div>
+      <button id="checkoutBtn" class="btn">Оформить заказ</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Свадебные платья. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="/public/js/auth-header.js"></script>
+  <script src="/public/js/cart.js"></script>
+
+  <script src="/public/js/analytics.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/account.css">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Свадебные платья</h1>
+            <nav>
+                <a href="/">Главная</a>
+                <a href="/catalog">Каталог</a>
+                <a href="/stats">Статистика</a>
+                <a href="/analytics">Аналитика</a>
+                <span id="authLinks"></span>
+                <button id="logoutBtn">Выйти</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container account-container">
+        <h2>Личный кабинет</h2>
+
+        <div class="account-info">
+            <div class="info-section">
+                <h3>Основная информация</h3>
+                <p><strong>Имя:</strong> <span id="userFirstName"></span></p>
+                <p><strong>Фамилия:</strong> <span id="userLastName"></span></p>
+                <p><strong>Логин:</strong> <span id="userUsername"></span></p>
+                <p><strong>Email:</strong> <span id="userEmail"></span></p>
+                <h3>Мои заказы</h3>
+                <p><a href="/orders">Просмотреть историю заказов</a></p>
+            </div>
+
+            <div class="info-section">
+                <h3>Контактные данные</h3>
+                <p><strong>Телефон:</strong> <span id="userPhone"></span></p>
+                <p><strong>Адрес:</strong> <span id="userAddress"></span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Свадебные платья. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // В конец body account.html
+        document.getElementById('logoutLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('token');
+            window.location.href = '/';
+        });
+    </script>
+
+    <script src="/public/js/auth-header.js"></script>
+
+    <script src="/public/js/account.js"></script>
+
+    <script src="/public/js/analytics.js"></script>
+</body>
+
+</html>
