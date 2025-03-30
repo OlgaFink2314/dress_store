@@ -16,6 +16,9 @@ const pool = new Pool({
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
+    ssl: {
+        rejectUnauthorized: false // Для внешних БД обычно требуется SSL
+    }
 });
 
 // Подключаем middleware для работы с cookies
